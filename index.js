@@ -14,7 +14,7 @@ class Blockchain {
   constructor() {
       const genesis = new Block('gen-data', 'gen-hash', 'gen-last-hash');
         
-      this.chain([genesis]);
+      this.chain = [genesis];
     }
   
   addBlock(data) {
@@ -27,3 +27,10 @@ class Blockchain {
       this.chain.push(block);
     }
 }
+
+const fooBlockchain = new Blockchain;
+fooBlockchain.addBlock('one');
+fooBlockchain.addBlock('two');
+fooBlockchain.addBlock('three');
+
+console.log(fooBlockchain);

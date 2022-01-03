@@ -5,3 +5,6 @@ class Block {
         this.lastHash = lastHash;
     }
 }
+
+const fooBlock = new Block('foo', 'fooHash', 'fooLastHash');
+console.log(fooBlock);
